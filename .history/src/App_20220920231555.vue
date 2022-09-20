@@ -1,7 +1,7 @@
 <template>
   <StringInterpolations/>
   <button @click="showPopup = true">Show popup</button>
-  <Popup v-show="showPopup" @close="showPopup = false" />
+  <Popup v-show="showPopup" />
 </template>
 
 <script>

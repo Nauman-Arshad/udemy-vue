@@ -1,7 +1,6 @@
 <template>
   <StringInterpolations/>
-  <button @click="showPopup = true">Show popup</button>
-  <Popup v-show="showPopup" @close="showPopup = false" />
+  <Popup/>
 </template>
 
 <script>
@@ -12,12 +11,7 @@ export default {
   components: {
     StringInterpolations,
     Popup
-},
-data() {
-return{
-  showPopup: false,
 }
-  }
 }
 </script>
 
