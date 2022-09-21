@@ -1,7 +1,7 @@
 <template>
-  <teleport to="#portal">
+  <!-- <teleport to="#portal">
    <Portal/>
-  </teleport>
+  </teleport> -->
  <Card>Card Content</Card>
  <Card><h2>I work on vue</h2></Card>
 <Card>
@@ -40,10 +40,10 @@
 <keep-alive>
 <component :is="activeTab"/>
 </keep-alive>
+<PostList />
 </template>
 
 <script>
-
 import Card from './components/Card.vue';
 import NameList from './components/NameList.vue';
 import ChildStyles from './components/ChildStyles.vue';
@@ -52,6 +52,7 @@ import TabB from './components/TabB.vue';
 import TabC from './components/TabC.vue';
 import TabD from './components/TabD.vue';
 import Portal from './components/Portal.vue';
+import PostList from './components/PostList.vue';
 export default {
   name: 'App',
   components: {
@@ -62,11 +63,12 @@ export default {
     TabB,
     TabC,
     TabD,
-    Portal
+    Portal,
+    PostList
 },
 data(){
   return{
-    activeTab: 'TabA'
+    activeTab: 'TabA',
   }
 }
 }
