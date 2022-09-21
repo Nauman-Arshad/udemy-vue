@@ -25,17 +25,21 @@
     {{slotProps.lname}} {{slotProps.fname}}
   </template>
 </NameList>
+<h4>App Component Text </h4>
+<ChildStyles/>
 </template>
 
 <script>
 
 import Card from './components/Card.vue';
 import NameList from './components/NameList.vue';
+import ChildStyles from './components/ChildStyles.vue';
 export default {
   name: 'App',
   components: {
     Card,
-    NameList
+    NameList,
+    ChildStyles
 }
 }
 </script>
@@ -51,5 +55,8 @@ export default {
 }
 img{
   width:100%
+}
+h4{
+  color: red
 }
 </style>
