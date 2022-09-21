@@ -1,4 +1,6 @@
 <template>
+  <ClickCounter/>
+  <HoverCounter/>
   <CreatePost/>
   <!-- <teleport to="#portal">
    <Portal/>
@@ -57,6 +59,8 @@ import Portal from './components/Portal.vue';
 import PostList from './components/PostList.vue';
 import CreatePost from './components/CreatePost.vue';
 import TemplateRef from './components/TemplateRef.vue';
+import ClickCounter from './components/ClickCounter.vue';
+import HoverCounter from './components/HoverCounter.vue';
 export default {
   name: 'App',
   components: {
@@ -70,7 +74,9 @@ export default {
     Portal,
     PostList,
     CreatePost,
-    TemplateRef
+    TemplateRef,
+    ClickCounter,
+    HoverCounter
 },
 data(){
   return{
