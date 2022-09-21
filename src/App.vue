@@ -30,10 +30,13 @@
 <button @click="activeTab = 'TabA'">Tab A</button>
 <button @click="activeTab = 'TabB'">Tab B</button>
 <button @click="activeTab = 'TabC'">Tab C</button>
+<button @click="activeTab = 'TabD'">Tab D</button>
 <!-- <TabA v-if="activeTab === 'TabA'"/>
 <TabB v-if="activeTab === 'TabB'"/>
 <TabC v-if="activeTab === 'TabC'"/> -->
+<keep-alive>
 <component :is="activeTab"/>
+</keep-alive>
 </template>
 
 <script>
@@ -44,6 +47,7 @@ import ChildStyles from './components/ChildStyles.vue';
 import TabA from './components/TabA.vue';
 import TabB from './components/TabB.vue';
 import TabC from './components/TabC.vue';
+import TabD from './components/TabD.vue';
 export default {
   name: 'App',
   components: {
@@ -52,7 +56,8 @@ export default {
     ChildStyles,
     TabA,
     TabB,
-    TabC
+    TabC,
+    TabD
 },
 data(){
   return{
