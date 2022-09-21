@@ -1,4 +1,5 @@
 <template>
+  <CreatePost/>
   <!-- <teleport to="#portal">
    <Portal/>
   </teleport> -->
@@ -53,6 +54,7 @@ import TabC from './components/TabC.vue';
 import TabD from './components/TabD.vue';
 import Portal from './components/Portal.vue';
 import PostList from './components/PostList.vue';
+import CreatePost from './components/CreatePost.vue';
 export default {
   name: 'App',
   components: {
@@ -64,7 +66,8 @@ export default {
     TabC,
     TabD,
     Portal,
-    PostList
+    PostList,
+    CreatePost
 },
 data(){
   return{
