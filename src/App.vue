@@ -1,23 +1,31 @@
 <template>
-  <StringInterpolations/>
-  <button @click="showPopup = true">Show popup</button>
-  <Popup v-show="showPopup" @close="showPopup = false" />
+ <Card>Card Content</Card>
+ <Card><h2>I work on vue</h2></Card>
+<Card>
+  <img src="https://www.shutterstock.com/image-illustration/spectral-clouds-escape-reality-series-600w-1707615538.jpg"/>
+</Card>
+<Card>
+  <template v-slot:header>
+    <h3>Header</h3>
+  </template>
+  <template v-slot:default>
+    <img src="https://www.shutterstock.com/image-illustration/spectral-clouds-escape-reality-series-600w-1707615538.jpg" />
+  </template>
+  <template v-slot:footer>
+    <button>View Details</button>
+  </template>
+</Card>
+
 </template>
 
 <script>
-import StringInterpolations from './components/StringInterpolations.vue';
-import Popup from './components/Popup.vue';
+
+import Card from './components/Card.vue';
 export default {
   name: 'App',
   components: {
-    StringInterpolations,
-    Popup
-},
-data() {
-return{
-  showPopup: false,
+    Card
 }
-  }
 }
 </script>
 
@@ -29,5 +37,8 @@ return{
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+img{
+  width:100%
 }
 </style>
