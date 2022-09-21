@@ -15,16 +15,27 @@
     <button>View Details</button>
   </template>
 </Card>
-
+<NameList>
+  <template v-slot:default = 'slotProps'>
+   {{slotProps.fname}} {{slotProps.lname}}
+  </template>
+</NameList>
+<NameList>
+  <template v-slot:default='slotProps'>
+    {{slotProps.lname}} {{slotProps.fname}}
+  </template>
+</NameList>
 </template>
 
 <script>
 
 import Card from './components/Card.vue';
+import NameList from './components/NameList.vue';
 export default {
   name: 'App',
   components: {
-    Card
+    Card,
+    NameList
 }
 }
 </script>
