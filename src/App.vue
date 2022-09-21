@@ -1,4 +1,7 @@
 <template>
+  <teleport to="#portal">
+   <Portal/>
+  </teleport>
  <Card>Card Content</Card>
  <Card><h2>I work on vue</h2></Card>
 <Card>
@@ -48,6 +51,7 @@ import TabA from './components/TabA.vue';
 import TabB from './components/TabB.vue';
 import TabC from './components/TabC.vue';
 import TabD from './components/TabD.vue';
+import Portal from './components/Portal.vue';
 export default {
   name: 'App',
   components: {
@@ -57,7 +61,8 @@ export default {
     TabA,
     TabB,
     TabC,
-    TabD
+    TabD,
+    Portal
 },
 data(){
   return{
