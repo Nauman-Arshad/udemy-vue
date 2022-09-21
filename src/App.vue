@@ -42,6 +42,7 @@
 <component :is="activeTab"/>
 </keep-alive>
 <PostList />
+<TemplateRef/>
 </template>
 
 <script>
@@ -55,6 +56,7 @@ import TabD from './components/TabD.vue';
 import Portal from './components/Portal.vue';
 import PostList from './components/PostList.vue';
 import CreatePost from './components/CreatePost.vue';
+import TemplateRef from './components/TemplateRef.vue';
 export default {
   name: 'App',
   components: {
@@ -67,7 +69,8 @@ export default {
     TabD,
     Portal,
     PostList,
-    CreatePost
+    CreatePost,
+    TemplateRef
 },
 data(){
   return{
