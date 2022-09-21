@@ -27,6 +27,13 @@
 </NameList>
 <h4>App Component Text </h4>
 <ChildStyles/>
+<button @click="activeTab = 'TabA'">Tab A</button>
+<button @click="activeTab = 'TabB'">Tab B</button>
+<button @click="activeTab = 'TabC'">Tab C</button>
+<!-- <TabA v-if="activeTab === 'TabA'"/>
+<TabB v-if="activeTab === 'TabB'"/>
+<TabC v-if="activeTab === 'TabC'"/> -->
+<component :is="activeTab"/>
 </template>
 
 <script>
@@ -34,12 +41,23 @@
 import Card from './components/Card.vue';
 import NameList from './components/NameList.vue';
 import ChildStyles from './components/ChildStyles.vue';
+import TabA from './components/TabA.vue';
+import TabB from './components/TabB.vue';
+import TabC from './components/TabC.vue';
 export default {
   name: 'App',
   components: {
     Card,
     NameList,
-    ChildStyles
+    ChildStyles,
+    TabA,
+    TabB,
+    TabC
+},
+data(){
+  return{
+    activeTab: 'TabA'
+  }
 }
 }
 </script>
